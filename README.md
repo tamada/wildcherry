@@ -1,5 +1,7 @@
 # :cherries: wildcherry
 
+![Version](https://img.shields.io/badge/version-{% data my.Version %}-blue.svg)
+
 Another implementation of Word Count (`wc`), again.
 
 ## :speaking_head: Overview
