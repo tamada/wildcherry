@@ -1,3 +1,4 @@
+# show help message
 @default: help
 
 App := 'WildCherry'
@@ -10,8 +11,15 @@ Version := `grep '^const VERSION = ' cmd/main/version.go | sed "s/^VERSION = \"\
     echo ""
     just --list
 
+# build the application with running tests
 build: test
     go build -o wildcherry cmd/main/wildcherry.go
 
+# run tests and generate the coverage report
 test:
     go test -covermode=count -coverprofile=coverage.out ./...
+
+# clean up build artifacts
+clean:
+    go clean
+    rm -f coverage.out wildcherry
