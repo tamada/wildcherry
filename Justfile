@@ -42,6 +42,5 @@ make_distribution_files:
         done; \
     done
 
-upload_assets tag: make_distribution_files
+upload_assets tag:
     gh release upload --repo tamada/wildcherry {{ tag }} dist/*.tar.gz
-
