@@ -59,3 +59,5 @@ jobs:
         run: |
           just make_distribution_files
           just upload_assets v${{ needs.setup.outputs.tag }} dist/wildcherry-*.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
