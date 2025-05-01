@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/tamada/wildcherry/badge.svg?branch=main)](https://coveralls.io/github/tamada/wildcherry?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tamada/wildcherry)](https://goreportcard.com/report/github.com/tamada/wildcherry)
 
-![Version](https://img.shields.io/badge/Version-0.1.4-blue)
+![Version](https://img.shields.io/badge/Version-0.1.5-blue)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 Another implementation of Word Count (`wc`), again.
