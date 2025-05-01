@@ -56,6 +56,6 @@ jobs:
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
       - name: Create distribution files.
-        run:
+        run: |
           just make_distribution_files
           just upload_assets v${{ needs.setup.outputs.tag }} dist/wildcherry-*.tar.gz
