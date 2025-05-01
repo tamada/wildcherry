@@ -3,7 +3,7 @@ on:
   pull_request:
     branches:
       - main
-  types: [closed]
+    types: [closed]
 
 jobs:
   setup:
@@ -33,9 +33,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: setup
     outputs:
-      tag: ${{ steps.vars.outputs.tag }}
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      tag: ${{ needs.setup.outputs.tag }}
+      upload_url: ${{ needs.setup.outputs.upload_url }}
     steps:
+      - uses: extractions/setup-just@v3
+        with:
+          just-version: '1.40.0'
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
