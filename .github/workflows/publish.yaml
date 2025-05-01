@@ -9,7 +9,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     # runs only the branch name starts with 'release/v' and the pull request is merged.
-    if: startsWith(github.head_ref, 'release/v') && github.event.pull_request.merged == true
+    if: startsWith(github.head_ref, 'releases/v') && github.event.pull_request.merged == true
     outputs:
       tag: ${{ steps.vars.outputs.tag }}
       upload_url: ${{ steps.create_release.outputs.upload_url }}

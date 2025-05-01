@@ -26,7 +26,7 @@ clean:
 
 # update the version if the new version is provided
 update_version new_version = "":
-    if [[ "{{ new_version }}" != "" ]]; then \
+    if [ "{{ new_version }}" != "" ]; then \
         sed 's/$VERSION/{{ new_version }}/g' .template/README.md > README.md; \
         sed 's/$VERSION/{{ new_version }}/g' .template/version.go > cmd/main/version.go; \
     fi
