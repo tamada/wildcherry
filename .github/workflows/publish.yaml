@@ -57,4 +57,4 @@ jobs:
 
       - name: Create distribution files.
         run:
-          just upload_assets ${{ steps.vars.outputs.tag }}
+          just upload_assets ${{ needs.setup.outputs.tag }} dist/wildcherry-*.tar.gz
