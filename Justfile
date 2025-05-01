@@ -35,7 +35,7 @@ update_version new_version = "":
 make_distribution_files:
     for os in "linux" "windows" "darwin"; do \
         for arch in "amd64" "arm64"; do \
-            mkdir -p build/releases/wildcherry-$os-$arch; \
+            mkdir -p dist/wildcherry-$os-$arch; \
             env GOOS=$os GOARCH=$arch go build -o dist/wildcherry-$os-$arch/wildcherry cmd/main/wildcherry.go; \
             cp README.md LICENSE dist/wildcherry-$os-$arch; \
             tar cvfz dist/wildcherry-$os-$arch.tar.gz -C dist wildcherry-$os-$arch; \
