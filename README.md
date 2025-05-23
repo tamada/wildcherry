@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/tamada/wildcherry/badge.svg?branch=main)](https://coveralls.io/github/tamada/wildcherry?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tamada/wildcherry)](https://goreportcard.com/report/github.com/tamada/wildcherry)
 
-![Version](https://img.shields.io/badge/Version-0.1.7-blue)
+![Version](https://img.shields.io/badge/Version-0.1.8-blue)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 Another implementation of Word Count (`wc`), again.
@@ -20,18 +20,13 @@ This repository is a separate implementation in the Go language, as an example i
 ```sh
 wildcherry [OPTION] <FILEs|DIRs|URLs...>
 OPTION
-    -b, --bytes             show the number of bytes.
-    -c, --chars             show the number of characters.
-    -l, --lines             show the number of lines.
-    -w, --words             show the number of words.
+    -b, --bytes          show the number of bytes.
+    -c, --chars          show the number of characters.
+    -l, --lines          show the number of lines.
+    -w, --words          show the number of words.
 
-    -N, --no-recursive      count files only, not directories.
-    -n, --no-ignore         does not respect the ignore files.
-    -L, --log <LEVEL>       specify the log level (info, debug, warn, fatal)
-
-    -f, --format <FORMAT>   specify the output format (default, json, csv, tsv, xml)
-    -s, --style <STYLE>     specify the output style (default, detail, summary)
-    -h, --help              print this message.
+        --log <LEVEL>    specify the log level (info, debug, warn, fatal)
+    -h, --help           print this message.
 ```
 
 ## :smile: About
