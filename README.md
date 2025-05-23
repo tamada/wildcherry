@@ -20,13 +20,18 @@ This repository is a separate implementation in the Go language, as an example i
 ```sh
 wildcherry [OPTION] <FILEs|DIRs|URLs...>
 OPTION
-    -b, --bytes          show the number of bytes.
-    -c, --chars          show the number of characters.
-    -l, --lines          show the number of lines.
-    -w, --words          show the number of words.
+    -b, --bytes             show the number of bytes.
+    -c, --chars             show the number of characters.
+    -l, --lines             show the number of lines.
+    -w, --words             show the number of words.
 
-        --log <LEVEL>    specify the log level (info, debug, warn, fatal)
-    -h, --help           print this message.
+    -N, --no-recursive      count files only, not directories.
+    -n, --no-ignore         does not respect the ignore files.
+    -L, --log <LEVEL>       specify the log level (info, debug, warn, fatal)
+
+    -f, --format <FORMAT>   specify the output format (default, json, csv, tsv, xml)
+    -s, --style <STYLE>     specify the output style (default, detail, summary)
+    -h, --help              print this message.
 ```
 
 ## :smile: About
