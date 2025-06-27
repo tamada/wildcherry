@@ -24,6 +24,10 @@ jobs:
         with:
           just-version: '1.40.0'
 
+      - name: Disable line ending conversion
+        run:
+          git config --global core.autocrlf false
+
       - name: Checkout
         uses: actions/checkout@v4
 
