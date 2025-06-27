@@ -13,11 +13,10 @@ func generateCompletions(flag *pflag.FlagSet, commandName string) error {
 		Use: "completions",
 	}
 	command.Flags().AddFlagSet(flag)
-	os.Mkdir("completions/", 0755)
-	os.Mkdir("completions/bash", 0755)
-	os.Mkdir("completions/zsh", 0755)
-	os.Mkdir("completions/fish", 0755)
-	os.Mkdir("completions/powershell", 0755)
+	os.MkdirAll("completions/bash", 0755)
+	os.MkdirAll("completions/zsh", 0755)
+	os.MkdirAll("completions/fish", 0755)
+	os.MkdirAll("completions/ps1", 0755)
 	command.GenBashCompletionFileV2(filepath.Join("completions/bash", commandName), true)
 	command.GenZshCompletionFile(filepath.Join("completions/zsh", commandName))
 	command.GenFishCompletionFile(filepath.Join("completions/fish", commandName), true)
