@@ -13,7 +13,7 @@ Version := `grep '^const VERSION = ' cmd/main/version.go | sed "s/^VERSION = \"\
 
 # build the application with running tests
 build: test
-    go build -o wildcherry cmd/main/wildcherry.go cmd/main/version.go cmd/main/completions.go
+    go build -o wildcherry cmd/main/wildcherry.go
 
 # run tests and generate the coverage report
 test:
@@ -37,7 +37,7 @@ make_distribution_files:
         for arch in "amd64" "arm64"; do \
             mkdir -p dist/wildcherry-$os-$arch; \
             env GOOS=$os GOARCH=$arch go build -o dist/wildcherry-$os-$arch/wildcherry cmd/main/wildcherry.go; \
-            cp README.md LICENSE completions dist/wildcherry-$os-$arch; \
+            cp README.md LICENSE dist/wildcherry-$os-$arch; \
             tar cvfz dist/wildcherry-$os-$arch.tar.gz -C dist wildcherry-$os-$arch; \
         done; \
     done
